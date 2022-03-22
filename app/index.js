@@ -7,5 +7,10 @@ const bot = new TelegramBot(token, {polling: true});
 
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
-    bot.sendMessage(chatId, "ok");
+
+    if (msg.text === "Привет") {
+        bot.sendMessage(chatId, 'Привет');
+    } else {
+        bot.sendMessage(chatId, 'Пока');
+    }
 });

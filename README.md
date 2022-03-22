@@ -2,8 +2,10 @@
 
 Deploy the project locally:
 
+* Installing `docker` and `docker-compose` from official sources
 * `cp .env.example .env`
-* Insert your token
-* `nmp init -y` to initialize node
-* `nmp i` to install the required libraries
-* `node src/index.js` to start the project
+* Insert `PROJECT_NAME` - your project name
+* Insert `PROJECTS_PATH` - full path to your project
+* `cp app/.env.example app/.env`
+* Insert `TOKEN` - token your bot
+* `docker-compose up -d`

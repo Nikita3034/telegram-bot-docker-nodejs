@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  node: 
+    restart: unless-stopped
+    container_name: ${PROJECT_NAME}_node
+    ports:
+      - "3000:3000"
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    volumes:
+      - ${PROJECTS_PATH}:/var/www
+    command: sh -c "npm init -y && npm i && npx nodemon index.js"
