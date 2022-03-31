@@ -1,4 +1,4 @@
-# Telegram bot
+# Basis for telegram bot written in node js with docker.
 
 Deploy the project locally:
 
